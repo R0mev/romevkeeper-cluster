@@ -30,4 +30,5 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
-      adminPassword: romevkeeper
+      adminUser: Romev
+      adminPassword: romevkeeper123
