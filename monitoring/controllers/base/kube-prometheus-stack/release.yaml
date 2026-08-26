@@ -41,6 +41,6 @@ spec:
           - gfa.r0mev.com
 
         tls: []
-        # - secretName: grafana-general-tls
-        #   hosts:
-        #   - grafana.example.com
+         - secretName: grafana-tls-secret
+           hosts:
+           - gfa.r0mev.com
