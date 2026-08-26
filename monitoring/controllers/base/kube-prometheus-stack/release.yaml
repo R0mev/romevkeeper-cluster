@@ -32,3 +32,15 @@ spec:
     grafana:
       adminUser: Romev
       adminPassword: romevkeeper123
+      ingress:
+        enabled: true
+
+         ingressClassName: traefik
+
+         hosts:
+           - gfa.r0mev.com
+
+        tls: []
+        # - secretName: grafana-general-tls
+        #   hosts:
+        #   - grafana.example.com
