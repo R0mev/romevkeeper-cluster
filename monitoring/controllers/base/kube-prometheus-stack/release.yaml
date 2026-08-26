@@ -35,10 +35,10 @@ spec:
       ingress:
         enabled: true
 
-         ingressClassName: traefik
+        ingressClassName: traefik
 
-         hosts:
-           - gfa.r0mev.com
+        hosts:
+          - gfa.r0mev.com
 
         tls: []
         # - secretName: grafana-general-tls
