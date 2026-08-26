@@ -40,7 +40,7 @@ spec:
         hosts:
           - gfa.r0mev.com
 
-        tls: []
-         - secretName: grafana-tls-secret
-           hosts:
-           - gfa.r0mev.com
+        tls: 
+          - secretName: grafana-tls-secret
+            hosts:
+              - gfa.r0mev.com
