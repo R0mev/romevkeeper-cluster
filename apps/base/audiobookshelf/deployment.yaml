@@ -23,8 +23,8 @@ spec:
           ports:
             - containerPort: 3005
          
-          securityContext:
-            allowPrivilegeEscalation: false
+         # securityContext:
+           # allowPrivilegeEscalation: false
 
           volumeMounts:
             - name: audiobookshelf-data
