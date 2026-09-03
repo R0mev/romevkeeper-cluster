@@ -12,19 +12,19 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-     # securityContext:
-     #   fsGroup: 33
-     #   runAsUser: 33
-     #   runAsGroup: 33
+      securityContext:
+        fsGroup: 33
+        runAsUser: 33
+        runAsGroup: 33
 
       containers:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:2.36.0
           ports:
             - containerPort: 3005
-         
-         # securityContext:
-           # allowPrivilegeEscalation: false
+              protocol: TCP
+          securityContext:
+            allowPrivilegeEscalation: false
 
           volumeMounts:
             - name: audiobookshelf-data
@@ -37,8 +37,8 @@ spec:
       
       restartPolicy: Always
 
-     # volumes:
-     # - name: audiobookshelf-data
-     #   persistentVolumeClaim:
-     #     claimName: audiobookshelf-data-pvc
+      volumes:
+      - name: audiobookshelf-data
+        persistentVolumeClaim:
+          claimName: audiobookshelf-data-pvc
 
