@@ -12,10 +12,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      securityContext:
-        fsGroup: 33
-        runAsUser: 33
-        runAsGroup: 33
+      #securityContext:
+      #  fsGroup: 33
+      #  runAsUser: 33
+      #  runAsGroup: 33
 
       containers:
         - name: audiobookshelf
@@ -23,8 +23,8 @@ spec:
           ports:
             - containerPort: 3005
               protocol: TCP
-          securityContext:
-            allowPrivilegeEscalation: false
+         # securityContext:
+         #   allowPrivilegeEscalation: false
 
           volumeMounts:
             - name: audiobookshelf-data
