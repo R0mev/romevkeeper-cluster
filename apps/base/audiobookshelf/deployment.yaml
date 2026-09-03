@@ -34,6 +34,9 @@ spec:
                 name: audiobookshelf-configmap
             #- secretRef:
              #   name: audiobookshelf-credentials
+      
+      restartPolicy: Always
+
       volumes:
       - name: audiobookshelf-data
         persistentVolumeClaim:
