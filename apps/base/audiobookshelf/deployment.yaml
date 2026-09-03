@@ -12,10 +12,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      securityContext:
-        fsGroup: 33
-        runAsUser: 33
-        runAsGroup: 33
+     # securityContext:
+     #   fsGroup: 33
+     #   runAsUser: 33
+     #   runAsGroup: 33
 
       containers:
         - name: audiobookshelf
@@ -37,8 +37,8 @@ spec:
       
       restartPolicy: Always
 
-      volumes:
-      - name: audiobookshelf-data
-        persistentVolumeClaim:
-          claimName: audiobookshelf-data-pvc
+     # volumes:
+     # - name: audiobookshelf-data
+     #   persistentVolumeClaim:
+     #     claimName: audiobookshelf-data-pvc
 
