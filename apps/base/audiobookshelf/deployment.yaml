@@ -4,8 +4,6 @@ metadata:
   name: audiobookshelf
 spec:
   replicas: 1
-  strategy:
-    type: Recreate 
   selector:
     matchLabels:
       app: audiobookshelf
@@ -14,11 +12,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-    # securityContext:
-    #    runAsNonRoot: True
-    #    fsGroup: 1000
-    #    runAsUser: 1000
-    #    runAsGroup: 1000
+     securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
 
       containers:
         - name: audiobookshelf
@@ -28,8 +25,8 @@ spec:
             - containerPort: 3005
               protocol: TCP
           
-     #     securityContext:
-     #       allowPrivilegeEscalation: false
+          securityContext:
+            allowPrivilegeEscalation: false
 
           volumeMounts:
             - name: audiobookshelf-config
