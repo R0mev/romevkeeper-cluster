@@ -3,3 +3,6 @@
  namespace: audiobookshelf
  resources:
    - ../../base/audiobookshelf/
+   - audiobookshelf-credentials.yaml
+   - abs-secret.yaml
+   - cloudflare.yaml

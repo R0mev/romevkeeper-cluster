@@ -41,8 +41,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: audiobookshelf-configmap
-            #- secretRef:
-             #   name: audiobookshelf-credentials
+            - secretRef:
+                name: audiobookshelf-credentials
       
       restartPolicy: Always
 
