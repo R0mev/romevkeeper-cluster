@@ -15,4 +15,4 @@ spec:
         namespace: flux-system
   values:
     clientInfoSecret:
-      name: NAS-info-secret
+      name: synology-info-secret

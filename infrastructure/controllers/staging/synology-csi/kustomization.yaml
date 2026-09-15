@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - ../../base/synology-csi
   - helmrelease.yaml
-  - NAS-info-secret.yaml
+  - synology-info-secret.yaml
