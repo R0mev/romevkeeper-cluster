@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jellyfin-media
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ""
+  volumeName: jellyfin-media     # binds to exactly this PV, nothing else
+  resources:
+    requests:
+      storage: 200Gi
