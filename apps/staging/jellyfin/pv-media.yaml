@@ -14,5 +14,5 @@ spec:
     - hard
     - noatime
   nfs:
-    server: 192.168.1.101:18        
+    server: 192.168.1.101       
     path: /volume2/media         
